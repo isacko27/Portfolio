@@ -33,9 +33,9 @@
                     <span>diseñador UX/UI</span>
                     <span class="experience"><b>3 años</b> experiencia</span>
                     <section class="info-contacts">
-                        <div class="circle"><img src="./styles/Assets/linkedin.svg" alt=""></div>
-                        <div class="circle"><img src="./styles/Assets/instagram.svg" alt=""></div>
-                        <div class="circle"><img src="./styles/Assets/twitter.svg" alt=""></div>
+                        <a href="https://www.linkedin.com/in/isaac-hervoso-554835241/" target="_blank" class="circle"><img src="./styles/Assets/linkedin.svg" alt=""></a>
+                        <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/instagram.svg" alt=""></a>
+                        <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/twitter.svg" alt=""></a>
                     </section>
                 </div>
             </section>
@@ -50,6 +50,35 @@
             <section class="about">
                 <h3>Acerca de mi</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni quod architecto, eligendi magnam molestiae nihil quos debitis temporibus quis error pariatur dignissimos excepturi et nemo nulla velit asperiores consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint explicabo veniam eum, dolorum quaerat eligendi tempora dolorem odit quo et modi, sequi possimus natus laboriosam cupiditate nobis quae reiciendis?</p>
+            </section>
+            <div class="serv-title">
+                <h3>Servicios</h3>
+            </div>
+            <section class="services">
+                <article class="desing">
+                    <img class="back" src="./styles/Assets/Ellipse 14.svg" alt="">
+                    <div>
+                        <img src="./styles/Assets/pencil.svg" alt="">
+                        <h2>UX/UI Desing</h2>
+                        <p>Desde diseño hasta imprementación del desarrollo</p>
+                    </div>
+                </article>
+                <article class="marketing">
+                    <img class="back" src="./styles/Assets/Ellipse 14.svg" alt="">
+                    <div>
+                        <img src="./styles/Assets/speaker.svg" alt="">
+                        <h2>UX/UI Desing</h2>
+                        <p>Desde diseño hasta imprementación del desarrollo</p>
+                    </div>
+                </article>
+                <article class="research">
+                    <img class="back" src="./styles/Assets/Ellipse 14.svg" alt="">
+                    <div>
+                        <img src="./styles/Assets/search.svg" alt="">
+                        <h2>UX/UI Desing</h2>
+                        <p>Desde diseño hasta imprementación del desarrollo</p>
+                    </div>
+                </article>
             </section>
         </article>
     </main>
@@ -197,27 +226,19 @@
         align-items: flex-end;
         box-sizing: content-box;
         background-image: url(./styles/Assets/D4F7D859-69B9-4A40-80A0-E7546DA36E48.png);
-        background-size: 38em;
+        background-size: 47em;
         background-position: 50% 90%;
-        
+        overflow: hidden;
     }
 
     .main-circle-hover {
         position: relative;
-        width: 38em;
-        height: 38em;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
-        margin-top: 7em;
-        background-size: 38em;
-        background-position: 50% 90%;
         background: rgb(36,38,53);
-background: radial-gradient(circle, rgba(36,38,53,0) 0%, rgba(36,38,53,0) 30%, rgba(36,38,53,1) 59%);
-   }
-
-    .main-circle img{
-        width: 30em;
-    }
-
+background: linear-gradient(180deg, rgba(36,38,53,0) 0%, rgba(36,38,53,0) 50%, rgba(36,38,53,1) 90%); }
+    
     .enterprices-cont {
         justify-content: space-evenly;
         align-items: center;
@@ -268,6 +289,78 @@ background: radial-gradient(circle, rgba(36,38,53,0) 0%, rgba(36,38,53,0) 30%, r
         color: var(--main-white);
         font-size: 1.5em;
         font-weight: lighter;
+    }
+
+    /* Services */
+    
+    .services {
+        margin: auto;
+        width: 80%;
+        padding: 0 10%;
+        display: grid;
+        grid-template-columns:repeat(auto-fill, minmax(19em,0.9fr));
+        justify-content: center;
+        column-gap: 4em;
+        row-gap: 2em;
+    }
+
+    .serv-title {
+        color: var(--main-light-blue);
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .serv-title h3{
+        text-align: center;
+        color: var(--main-light-blue);
+        font-size: 3em;
+        font-weight: lighter;
+    }
+
+    .services article {
+        background-color: var(--main-white);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .services article .back{
+        position: relative;
+        z-index: 0;
+        width: 100%;
+    }
+
+    .services article div {
+        bottom: 8em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        color: var(--main-background-blue);
+        max-height: 30em;
+    }
+
+    .services article div h2 {
+        font-weight: 400;
+        font-size: 1.7em;
+    }
+
+    .services article div p {
+        position: relative;
+        top: 1em;
+        width: 90%;
+        font-size: 1.3em;
+        color: var(--main-gray);
+        margin: auto;
+    }
+
+    .services article div img {
+        width: 40%;
+        margin: auto;
     }
 
 </style>
