@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./styles/styles.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Isaac Dev</title>
@@ -23,6 +24,7 @@
     </nav>
     <main>
         <article>
+<!-- Principal Info -->
             <section class="info-section">
                 <div class="up">
                     <h2>Soy</h2>
@@ -54,8 +56,13 @@
             <div class="serv-title">
                 <h3>Servicios</h3>
             </div>
+<!-- Services -->
             <section class="services">
-                <article class="desing">
+                <div class="c-container">
+                    <img class="carbutton c-right" src="./styles/Assets/arrow.svg" alt="">
+                    <img class="carbutton c-left" src="./styles/Assets/arrow.svg" alt="">
+                </div>
+                <article class="c-box desing">
                     <img class="back" src="./styles/Assets/Ellipse 14.svg" alt="">
                     <div>
                         <img src="./styles/Assets/pencil.svg" alt="">
@@ -63,7 +70,7 @@
                         <p>Desde diseño hasta imprementación del desarrollo</p>
                     </div>
                 </article>
-                <article class="marketing">
+                <article class="c-box marketing">
                     <img class="back" src="./styles/Assets/Ellipse 14.svg" alt="">
                     <div>
                         <img src="./styles/Assets/speaker.svg" alt="">
@@ -71,7 +78,7 @@
                         <p>Desde diseño hasta imprementación del desarrollo</p>
                     </div>
                 </article>
-                <article class="research">
+                <article class="c-box research">
                     <img class="back" src="./styles/Assets/Ellipse 14.svg" alt="">
                     <div>
                         <img src="./styles/Assets/search.svg" alt="">
@@ -80,13 +87,38 @@
                     </div>
                 </article>
             </section>
+<!-- Skills -->
+            <section class="skills">
+                <h3 class="title">Mis habilidades</h3>
+                <article class="container">
+                    <section class="marketing">
+                        <div class="info">
+                            <span>Marketing</span>
+                            <span class="percentaje">95%</span>
+                        </div>
+                        <div class="cont"><div class="mount"></div></div>
+                    </section>
+                    <section class="desing">
+                        <div class="info">
+                            <span>UI Desing</span>
+                            <span class="percentaje">95%</span>
+                        </div>
+                        <div class="cont"><div class="mount"></div></div>
+                    </section>
+                    <section class="research">
+                        <div class="info">
+                            <span>UX Research</span>
+                            <span class="percentaje">80%</span>
+                        </div>
+                        <div class="cont"><div class="mount"></div></div>
+                    </section>
+                </article>
+            </section>
         </article>
     </main>
 </body>
 <style>
-
-
-    :root {
+     :root {
         --main-background-blue: #03051c;
         --main-dark-blue: #242635;
         --main-light-blue: #35b0bf;
@@ -94,274 +126,124 @@
         --main-white: #ffffff;
     }
 
-    body {
-        font-family: 'Rubik', sans-serif;
-        font-weight: lighter;
-        background-color: var(--main-background-blue);
-    }
+    /* Skills */
 
-    /* Nav */
-
-    nav {
-        padding-top: 1.8em;
-        display: flex;
-    }
-    nav .nav-list {
-        width: 100%;
-        list-style: none;
-        padding-right: 4em;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    nav .nav-list li {
-        display: inline;
-        text-decoration: none;
-        color: var(--main-white);
-        margin-right: 3%;
-        margin-left: 1.7%;
-    }
-
-    nav .nav-list li a{
-        text-decoration: none;
-        color: var(--main-white);
-        font-weight: bolder;
-    }
-
-    /* Info Section */
-
-    .info-section {
-        position: absolute;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        width: 23em;
-        margin-left: 10em;
-        margin-top: 3em;
-    }
-
-    .info-section .up {
-        width: 15em;
-    }
-
-    .info-section .up h2 {
-        font-weight: lighter;
-        font-size: 3em;
-        margin: 0;
-        display: flex;
-        padding: 0.5em 0 0.3em 0;
-        border-bottom: 5px solid var(--main-white);
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
-        color: var(--main-white);
-    }
-
-
-    .info-section .up h1 {
-        margin: 0.2em 0 0.3em 0;
-        font-size: 5em;
-        font-weight: 500;
-        color: var(--main-light-blue);
-    }
-
-    .down-text span {
-        color: var(--main-white);
-        font-size: 2em;
-        display: block;
-    }
-
-    .down-text .experience {
-        margin-top: 1.5em;
-        margin-bottom: 1em;
-    }
-
-    .down-text .experience b {
-        color: var(--main-light-blue);
-    }
-
-            /* Info Section - Icons */
-
-    .info-contacts {
-        width: 15em;
-        display: flex;
-        height: 4em;
-        justify-content: space-between;
-    }
-
-    .info-contacts .circle {
-        background-color: var(--main-white);
-        display: flex;
-        border-radius: 50%;
-        justify-content: center;
-        cursor: pointer;
-        transition: opacity 0.3s;
-    }
-
-    .info-contacts .circle:hover {
-        opacity: 0.8;
-    }
-
-    .info-contacts .circle img{
-        width: 60%;
-    }
-
-
-    /* Main Section */
-
-    .main-section {
-        background-color: var(--main-background-blue);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-circle {
-        background-color: var(--main-dark-blue);
-        width: 38em;
-        height: 38em;
-        border-radius: 50%;
-        margin-top: 7em;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        box-sizing: content-box;
-        background-image: url(./styles/Assets/D4F7D859-69B9-4A40-80A0-E7546DA36E48.png);
-        background-size: 47em;
-        background-position: 50% 90%;
-        overflow: hidden;
-    }
-
-    .main-circle-hover {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: rgb(36,38,53);
-background: linear-gradient(180deg, rgba(36,38,53,0) 0%, rgba(36,38,53,0) 50%, rgba(36,38,53,1) 90%); }
-    
-    .enterprices-cont {
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: var(--main-dark-blue);
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        bottom: 3em;
-        border-radius: 10px;
-        width: 60%;
-        height: 13.3em;
-        padding: 0 5em;
-    }
-
-    .enterprices-cont div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--main-gray);
-        width: 25%;
-        min-height: 8em;
-        border-radius: 10px;
-    }
-
-    .enterprices-cont div img {
-        width: 53%;
-    }
-
-    /* About me */
-
-    .about {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    .skills {
         margin: auto;
         width: 70%;
-    }
-
-    .about h3 {
-        margin: 0.3em 0em;
-        color: var(--main-light-blue);
-        font-size: 3em;
-        font-weight: lighter;
-    }
-    .about p {
-        color: var(--main-white);
-        font-size: 1.5em;
-        font-weight: lighter;
-    }
-
-    /* Services */
-    
-    .services {
-        margin: auto;
-        width: 80%;
-        padding: 0 10%;
-        display: grid;
-        grid-template-columns:repeat(auto-fill, minmax(19em,0.9fr));
-        justify-content: center;
-        column-gap: 4em;
-        row-gap: 2em;
-    }
-
-    .serv-title {
-        color: var(--main-light-blue);
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }
-
-    .serv-title h3{
-        text-align: center;
-        color: var(--main-light-blue);
-        font-size: 3em;
-        font-weight: lighter;
-    }
-
-    .services article {
-        background-color: var(--main-white);
-        border-radius: 5px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        margin: auto;
     }
 
-    .services article .back{
-        position: relative;
-        z-index: 0;
+    .skills .title {
+        margin: 1em 0em;
+        color: var(--main-light-blue);
+        font-size: 3em;
+        font-weight: lighter;
+    }
+
+    .skills .container {
         width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
     }
 
-    .services article div {
-        bottom: 8em;
+    .skills section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        position: relative;
-        text-align: center;
-        color: var(--main-background-blue);
-        max-height: 30em;
     }
 
-    .services article div h2 {
-        font-weight: 400;
-        font-size: 1.7em;
+    .skills section .info {
+        color: var(--main-white);
+        font-weight: 500;
     }
 
-    .services article div p {
-        position: relative;
-        top: 1em;
-        width: 90%;
-        font-size: 1.3em;
-        color: var(--main-gray);
-        margin: auto;
+    .skills section .percentaje {
+        color: var(--main-light-blue);
+        font-weight: 300;
     }
 
-    .services article div img {
-        width: 40%;
-        margin: auto;
+    .skills section .cont {
+        width: 100%;
+        height: 1.2em;
+        background-color: var(--main-white);
+        border-radius: 10ch;
+        margin: 0.5em 0 1.5em 0;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .skills section .cont .mount {
+        background-color: #35b0bf;
+        border-radius: inherit;
+    }
+
+    .research .mount {
+        width: 80%;
+    }
+
+    .desing .mount {
+        width: 95%;
+    }
+
+    .marketing .mount {
+        width: 95%;
+    }
+    
+    @media screen and (max-width:900px) {
+
+        .c-container {
+            display: flex;
+        }
+
+        .services {
+            overflow: hidden;
+            grid-template-columns:repeat(3, 17em);
+        }
+
+        .services article {
+            transform: translateX(0%);
+        }
+        
     }
 
 </style>
+<script>
+
+    const carrusel = document.querySelectorAll(".c-box")
+    const lArrow = document.querySelector(".c-right")
+    const rArrow = document.querySelector(".c-left")
+    let positions = ["123%","0%","-123%"]
+    let actPos = "0%"
+
+    const changePosition = (pos)=>{
+        carrusel[1].style.transform = `translateX(${pos})`;
+        carrusel[0].style.transform = `translateX(${pos})`;
+        carrusel[2].style.transform = `translateX(${pos})`;
+        return pos
+    }
+
+    rArrow.addEventListener('click',function() {
+        if (actPos == positions[0]) {
+            actPos = changePosition(positions[1])
+        }
+        else {
+            actPos = changePosition(positions[2])
+        }
+        
+    });
+
+    lArrow.addEventListener('click',function() {
+        if (actPos == positions[2]) {
+            actPos = changePosition(positions[1])
+        }
+        else {
+            actPos = changePosition(positions[0])
+        }
+    });
+
+    console.log(carrusel)
+
+</script>
 </html>
