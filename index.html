@@ -25,38 +25,62 @@
     <main>
         <article>
 <!-- Principal Info -->
-            <section class="info-section">
-                <div class="up">
-                    <h2>Soy</h2>
-                    <h1>Isaac</h1>
-                </div>
-                <div class="down-text">
-                    <span>Marketing y</span>
-                    <span>diseñador UX/UI</span>
-                    <span class="experience"><b>3 años</b> experiencia</span>
-                    <section class="info-contacts">
-                        <a href="https://www.linkedin.com/in/isaac-hervoso-554835241/" target="_blank" class="circle"><img src="./styles/Assets/linkedin.svg" alt=""></a>
-                        <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/instagram.svg" alt=""></a>
-                        <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/twitter.svg" alt=""></a>
-                    </section>
-                </div>
-            </section>
-            <section class="main-section">
-                <div class="main-circle"><div class="main-circle-hover"></div></div>
-                <div class="enterprices-cont">
-                    <div><img src="./styles/Assets/google.svg" alt=""></div>
-                    <div><img src="./styles/Assets/amazon.svg" alt=""></div>
-                    <div><img src="./styles/Assets/spotify.svg" alt=""></div>
-                </div>
-            </section>
-            <section class="about">
-                <h3>Acerca de mi</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni quod architecto, eligendi magnam molestiae nihil quos debitis temporibus quis error pariatur dignissimos excepturi et nemo nulla velit asperiores consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint explicabo veniam eum, dolorum quaerat eligendi tempora dolorem odit quo et modi, sequi possimus natus laboriosam cupiditate nobis quae reiciendis?</p>
-            </section>
+            <div class="desktop">
+                <section class="info-section">
+                    <div class="up">
+                        <h2>Soy</h2>
+                        <h1>Isaac</h1>
+                    </div>
+                    <div class="down-text">
+                        <span>Marketing y</span>
+                        <span>diseñador UX/UI</span>
+                        <span class="experience"><b>3 años</b> experiencia</span>
+                        <section class="info-contacts">
+                            <a href="https://www.linkedin.com/in/isaac-hervoso-554835241/" target="_blank" class="circle"><img src="./styles/Assets/linkedin.svg" alt=""></a>
+                            <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/instagram.svg" alt=""></a>
+                            <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/twitter.svg" alt=""></a>
+                        </section>
+                    </div>
+                </section>
+                <section class="main-section">
+                    <div class="main-circle"><div class="main-circle-hover"></div></div>
+                    <div class="enterprices-cont">
+                        <div><img src="./styles/Assets/google.svg" alt=""></div>
+                        <div><img src="./styles/Assets/amazon.svg" alt=""></div>
+                        <div><img src="./styles/Assets/spotify.svg" alt=""></div>
+                    </div>
+                </section>
+                <section class="about">
+                    <h3>Acerca de mi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni quod architecto, eligendi magnam molestiae nihil quos debitis temporibus quis error pariatur dignissimos excepturi et nemo nulla velit asperiores consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint explicabo veniam eum, dolorum quaerat eligendi tempora dolorem odit quo et modi, sequi possimus natus laboriosam cupiditate nobis quae reiciendis?</p>
+                </section>
+            </div>
+    <!-- Mobile Main -->
+            <div class="mobile">
+                <section class="main-section">
+                    <div class="main-circle"></div>
+                </section>
+                <section class="info-section">
+                    <div class="up">
+                        <h2>Soy</h2>
+                        <h1>Isaac</h1>
+                    </div>
+                    <div class="down-text">
+                        <span>Marketing y</span>
+                        <span>diseñador UX/UI</span>
+                        <span class="experience"><b>3 años</b> experiencia</span>
+                        <section class="info-contacts">
+                            <a href="https://www.linkedin.com/in/isaac-hervoso-554835241/" target="_blank" class="circle"><img src="./styles/Assets/linkedin.svg" alt=""></a>
+                            <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/instagram.svg" alt=""></a>
+                            <a href="https://www.instagram.com/isacko_hervoso/" target="_blank" class="circle"><img src="./styles/Assets/twitter.svg" alt=""></a>
+                        </section>
+                    </div>
+                </section>
+            </div>
+<!-- Services -->
             <div class="serv-title">
                 <h3>Servicios</h3>
             </div>
-<!-- Services -->
             <section class="services">
                 <div class="c-container">
                     <img class="carbutton c-right" src="./styles/Assets/arrow.svg" alt="">
@@ -114,6 +138,11 @@
                     </section>
                 </article>
             </section>
+            <section class="projects">
+                <section class="title">
+                    <h3>Proyectos</h3>
+                </section>
+            </section>
         </article>
     </main>
 </body>
@@ -126,124 +155,7 @@
         --main-white: #ffffff;
     }
 
-    /* Skills */
-
-    .skills {
-        margin: auto;
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skills .title {
-        margin: 1em 0em;
-        color: var(--main-light-blue);
-        font-size: 3em;
-        font-weight: lighter;
-    }
-
-    .skills .container {
-        width: 100%;
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    .skills section {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .skills section .info {
-        color: var(--main-white);
-        font-weight: 500;
-    }
-
-    .skills section .percentaje {
-        color: var(--main-light-blue);
-        font-weight: 300;
-    }
-
-    .skills section .cont {
-        width: 100%;
-        height: 1.2em;
-        background-color: var(--main-white);
-        border-radius: 10ch;
-        margin: 0.5em 0 1.5em 0;
-        overflow: hidden;
-        display: flex;
-    }
-
-    .skills section .cont .mount {
-        background-color: #35b0bf;
-        border-radius: inherit;
-    }
-
-    .research .mount {
-        width: 80%;
-    }
-
-    .desing .mount {
-        width: 95%;
-    }
-
-    .marketing .mount {
-        width: 95%;
-    }
-    
-    @media screen and (max-width:900px) {
-
-        .c-container {
-            display: flex;
-        }
-
-        .services {
-            overflow: hidden;
-            grid-template-columns:repeat(3, 17em);
-        }
-
-        .services article {
-            transform: translateX(0%);
-        }
-        
-    }
 
 </style>
-<script>
-
-    const carrusel = document.querySelectorAll(".c-box")
-    const lArrow = document.querySelector(".c-right")
-    const rArrow = document.querySelector(".c-left")
-    let positions = ["123%","0%","-123%"]
-    let actPos = "0%"
-
-    const changePosition = (pos)=>{
-        carrusel[1].style.transform = `translateX(${pos})`;
-        carrusel[0].style.transform = `translateX(${pos})`;
-        carrusel[2].style.transform = `translateX(${pos})`;
-        return pos
-    }
-
-    rArrow.addEventListener('click',function() {
-        if (actPos == positions[0]) {
-            actPos = changePosition(positions[1])
-        }
-        else {
-            actPos = changePosition(positions[2])
-        }
-        
-    });
-
-    lArrow.addEventListener('click',function() {
-        if (actPos == positions[2]) {
-            actPos = changePosition(positions[1])
-        }
-        else {
-            actPos = changePosition(positions[0])
-        }
-    });
-
-    console.log(carrusel)
-
-</script>
+<script src="./js/main.js"></script>
 </html>
